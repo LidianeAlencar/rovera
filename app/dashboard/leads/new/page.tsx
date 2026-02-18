@@ -1,7 +1,7 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { redirect } from "next/navigation";
-import DashboardShell from "@/app/dashboard/components/DashboardShell";
+import DashboardShell from "../../DashboardShell";
 import LeadCaptureForm from "./LeadCaptureForm";
 
 export default async function LeadNewPage() {

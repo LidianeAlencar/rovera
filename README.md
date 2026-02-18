@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 🚗 Rovera Consórcio – Desafio Front-End
 
-First, run the development server:
+Landing page e dashboard desenvolvidos como solução para o desafio técnico de Front-End.
+
+O projeto simula a jornada de um usuário interessado em realizar uma simulação de consórcio, incluindo autenticação social e persistência de dados.
+
+Link Vercel: https://rovera-lp.vercel.app/
+Link Repositório: https://github.com/LidianeAlencar/rovera
+Link .env.local ( pra facilitar o teste local ) **enviado separado**
+
+---
+
+## 📌 Tecnologias Utilizadas
+
+- **Next.js 16**
+- **React 19**
+- **TailwindCSS 4**
+- **NextAuth (GitHub + Google OAuth)**
+- **Supabase (Banco de Dados)**
+- **Framer Motion (animações)**
+- **Lucide React (ícones)**
+- **Vercel (deploy)**
+
+---
+
+## 🎯 Funcionalidades Implementadas
+
+### 🔐 Autenticação
+- Login com GitHub
+- Login com Google
+- Redirecionamento automático após autenticação
+- Proteção de área interna (Dashboard)
+
+### 🏠 Landing Page
+- Layout Desktop e Mobile
+- Animações suaves
+- Estrutura otimizada com Tailwind
+
+### 📊 Dashboard
+- Exibição de dados do usuário autenticado
+- Simulação de consórcio
+- Cálculo dinâmico de parcelas
+- Feedback visual da simulação
+- Tela de sucesso
+
+### 🧾 Persistência de Dados
+- Integração com Supabase
+- Registro de leads
+- Armazenamento de simulações
+
+---
+
+## 🗂 Estrutura do Projeto
+
+app/  
+├── api/  
+│ ├── auth/  
+│ └── leads/  
+├── dashboard/  
+├── leads/  
+├── page.tsx  
+components/  
+lib/  
+├── auth.ts  
+└── supabase.ts
+
+
+### Organização
+
+- `app/` → Rotas (App Router)
+- `components/` → Componentes reutilizáveis
+- `lib/` → Configurações (Auth, Supabase)
+- `api/` → Rotas server-side
+
+---
+
+## 🛠 Como Rodar Localmente
+
+### 1️⃣ Clone o repositório
 
 ```bash
+git clone https://github.com/LidianeAlencar/rovera
+cd rovera-landing
+
+npm install
+
+GITHUB_ID=
+GITHUB_SECRET=
+GOOGLE_ID=
+GOOGLE_SECRET=
+NEXTAUTH_SECRET=
+NEXTAUTH_URL=http://localhost:3000
+
+NEXT_PUBLIC_SUPABASE_URL=
+SUPABASE_SERVICE_ROLE_KEY=
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+http://localhost:3000
