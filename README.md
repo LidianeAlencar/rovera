@@ -7,7 +7,7 @@ O projeto simula a jornada de um usuário interessado em realizar uma simulaçã
 
 Link Vercel: https://rovera-lp.vercel.app/
 Link Repositório: https://github.com/LidianeAlencar/rovera
-Link .env.local ( pra facilitar o teste local ) **enviado separado**
+Link com credenciais do supabase **enviado separado**
 
 ---
 
@@ -85,15 +85,15 @@ cd rovera-landing
 
 npm install
 
-GITHUB_ID=
-GITHUB_SECRET=
-GOOGLE_ID=
-GOOGLE_SECRET=
-NEXTAUTH_SECRET=
+GITHUB_ID= gerar novo
+GITHUB_SECRET= gerar novo
+GOOGLE_ID= gerar novo
+GOOGLE_SECRET= gerar novo
+NEXTAUTH_SECRET= gerar novo
 NEXTAUTH_URL=http://localhost:3000
 
-NEXT_PUBLIC_SUPABASE_URL=
-SUPABASE_SERVICE_ROLE_KEY=
+NEXT_PUBLIC_SUPABASE_URL= enviado separado
+SUPABASE_SERVICE_ROLE_KEY= enviado separado
 
 npm run dev
 http://localhost:3000
